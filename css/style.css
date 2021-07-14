@@ -69,14 +69,14 @@ header {
     text-decoration: none;
     width: 100%;
     color: black;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
 }
 .contanier ul li  a:hover{
-   padding-left: 10px;
+   padding-left: 15px;
 }
 
 
