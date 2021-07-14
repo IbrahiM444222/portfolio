@@ -1,38 +1,4 @@
-
-:root {
-    --maingray:#999;
-}
-
 * {
-    box-sizing: border-box;
-      margin: 0;
-}
-
-
-header {
-    height: 60px;
-     background-color: var(--maingray);
-     display: flex;
-     /* justify-content: space-between; */
-     align-items: center;
-}
-
-.logo {
-    color: white;
-}
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-nav li {
-    margin-left: 30px;
-    text-align: center;
-}
-nav a{
-    color: white;
-    text-decoration: none;
-     letter-spacing: 1px;
+ box-sizing: border-box;
+ margin: 0;   
 }
