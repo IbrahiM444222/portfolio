@@ -26,11 +26,14 @@ header {
 .contanier .logo {
     width:40px ;
 }
-header .contanier .links{
+.contanier .links{
   position: relative;
 }
-header .contanier .links .icon {
+.contanier .links .icon {
    width: 30px;
+}
+.contanier .links .icon:hover {
+   cursor: pointer;
 }
 .contanier .links .icon:hover .links ul {
    display: block;
