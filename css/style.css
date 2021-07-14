@@ -9,8 +9,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 header {
-    background-color: rgb(167, 167, 167);
+    background-color: white;
     padding: 10px;
+    border: 1px solid rgb(236, 233, 233);
+    box-shadow: 0 3px 20px rgba(204, 203, 203, 0.6);
 }
 .contanier {
  padding-left: 20px;
@@ -30,10 +32,50 @@ header .contanier .links{
 header .contanier .links .icon {
    width: 30px;
 }
-
+.contanier .links .icon:hover .links ul {
+   display: block;
+} 
+.contanier .links:hover ul {
+    display: block;
+}
 .contanier ul {
     display: none;
+    list-style: none;
+    right: 0;
+    position: absolute;
+    min-width: 200px;
+    background-color:rgb(173, 173, 173);
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
+.contanier ul li{
+ padding: 10px;
+}
+.contanier ul li:not(:last-child) {
+ margin-bottom: 10px;
+ border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.contanier ul li  a{
+    text-decoration: none;
+    width: 100%;
+    color: black;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+.contanier ul li  a:hover{
+   padding-left: 10px;
+}
+
 
 
 /* # Mobile */
