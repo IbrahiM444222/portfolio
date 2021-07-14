@@ -1,4 +1,67 @@
+/* global variables */
+
+/* end global variables */
 * {
  box-sizing: border-box;
  margin: 0;   
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+header {
+    background-color: rgb(167, 167, 167);
+    padding: 10px;
+}
+.contanier {
+ padding-left: 20px;
+ padding-right: 20px;
+ margin-left: auto ;
+ margin-right: auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.contanier .logo {
+    width:40px ;
+}
+header .contanier .links{
+  position: relative;
+}
+header .contanier .links .icon {
+   width: 30px;
+}
+
+.contanier ul {
+    display: none;
+}
+
+
+/* # Mobile */
+@media (min-width: 480px)
+{
+.contanier {
+ width: 450px;
+}
+ 
+}
+/* # Tablet */
+@media (min-width: 768px) 
+{
+.contanier {
+ width: 750px;
+}
+}
+/* # Desktop */
+@media (min-width: 992px)
+{
+.contanier {
+ width: 950px;
+}   
+}
+/* # Huge */
+@media(min-width: 1280px) 
+{
+.contanier {
+ width: 1150px;
+}   
 }
