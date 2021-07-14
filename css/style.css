@@ -1,5 +1,7 @@
 /* global variables */
-
+:root {
+    --main-color:coral;
+}
 /* end global variables */
 * {
  box-sizing: border-box;
@@ -8,6 +10,28 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
+/*================================== selection ================================== */
+::selection {
+    color: black;
+    background-color: var(--main-color);
+}
+/* ================================== selection ==================================*/
+
+/*================================== scroll ================================== */
+::-webkit-scrollbar{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* ================================== scroll ==================================*/
 header {
     background-color: white;
     padding: 10px;
@@ -25,6 +49,8 @@ header {
 }
 .contanier .logo {
     width:40px ;
+    color: var(--main-color);
+    font-size: 36px;
 }
 .contanier .links{
   position: relative;
@@ -35,9 +61,7 @@ header {
 .contanier .links .icon:hover {
    cursor: pointer;
 }
-.contanier .links .icon:hover .links ul {
-   display: block;
-} 
+ 
 .contanier .links:hover ul {
     display: block;
 }
@@ -46,11 +70,12 @@ header {
     list-style: none;
     right: 0;
     position: absolute;
-    min-width: 200px;
-    background-color:rgb(173, 173, 173);
+    min-width: 200px;;
+    background-color: white;
     top: calc(100% + 30px);
     margin: 0;
     padding: 0;
+    z-index: 1;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -62,13 +87,14 @@ header {
 }
 .contanier ul li:not(:last-child) {
  margin-bottom: 10px;
- border-bottom: 1px solid rgb(233, 233, 233);
+ border-bottom: 1px solid rgb(187, 186, 186);
 }
 
 .contanier ul li  a{
     text-decoration: none;
     width: 100%;
-    color: black;
+    color: var(--main-color);
+    font-weight: bold;
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -81,11 +107,82 @@ header {
 
 
 
-/* # Mobile */
+/* <!-- end header --> */
+
+/* <!-- main landing --> */
+
+.main-landing {
+    height: calc(100vh - 63px);
+    background-image: url("/img/mainlanding.jpeg");
+    position:relative;
+    background-size: cover;
+}
+
+main .main-landing .text-landing {
+    line-height: 2;
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.main-landing h2 {
+  color: aliceblue;  
+}
+.main-landing span {
+    color: var(--main-color);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+ /* <!-- end main landing --> */
+ /* <!-- works --> */
+ 
+ .main-works {
+     background-color: white;
+     padding-top:60px ;
+     padding-bottom: 60px;
+    
+ }
+ .main-works .container {
+ display: grid;
+ grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+ grid-gap: 20px;
+  align-content: center;  
+ }
+
+.main-works .container .works {
+    text-align: center;
+    padding: 10px;
+    line-height: 2;
+    
+}
+.main-works .container .works i {
+   color: var(--main-color);
+   font-size: 40px;
+}
+.main-works .container p {
+   font-style: italic;
+        white-space: wrap; 
+    text-overflow: ellipsis;
+}
+   /* <!--end  works --> */
+
+
+
+
+   /* # Mobile */
 @media (min-width: 480px)
 {
 .contanier {
  width: 450px;
+}
+.main-landing .text-landing {
+    line-height: 1;
+    
 }
  
 }
@@ -109,4 +206,15 @@ header {
 .contanier {
  width: 1150px;
 }   
+
+ .main-works .container {
+ grid-template-columns: repeat(auto-fill,minmax(401px,1fr));
+ } 
+}
+@media(min-width: 1700px) 
+{
+
+ .main-works .container {
+ grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+ } 
 }
