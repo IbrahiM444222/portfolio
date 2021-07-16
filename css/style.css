@@ -240,7 +240,7 @@ main .main-landing:hover .text-landing span {
 }
 .services .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-gap: 40px;
 }
 .services .services-content .serv {
@@ -330,40 +330,29 @@ main .main-landing:hover .text-landing span {
   font-size: 40px;
   color: var(--main-color);
 }
-.skill .txt {
+.skill .txt p {
   letter-spacing: 2px;
   color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+progress {
+  border: none;
+  width: 300px;
+  height: 20px;
+}
+
+progress {
+  color: var(--main-color);
+}
+
+progress::-webkit-progress-value {
+  background:var(--main-color);
+}
+
+progress::-moz-progress-bar {
+  background: lightcolor;
 }
 /* end skills */
-
-/* footer */
-footer {
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-  padding: 30px;
-  margin-bottom: 0;
-}
-footer p:first-child {
-  padding: 10px 0 0 20px;
-}
-footer .mail {
-  text-align: center;
-  font-size: 30px;
-}
-footer .mail a {
-  text-decoration: none;
-  color: var(--therd-color);
-}
-footer p:last-child {
-  font-weight: bold;
-  font-size: medium;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* end footer */
-
-
 /* about me */
   .aboutme {
     margin-top: 60px;
@@ -410,6 +399,35 @@ footer p:last-child {
    color: var(--head-links);
  }
 /* end about */
+/* footer */
+footer {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  padding: 30px;
+  margin-bottom: 0;
+}
+footer p:first-child {
+  padding: 10px 0 0 20px;
+}
+footer .mail {
+  text-align: center;
+  font-size: 30px;
+}
+footer .mail a {
+  text-decoration: none;
+  color: var(--therd-color);
+}
+footer p:last-child {
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* end footer */
+
+
+
 /* # Mobile */
 @media (min-width: 480px) {
   .contanier {
