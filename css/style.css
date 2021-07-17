@@ -247,6 +247,8 @@ main .main-landing:hover .text-landing span {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  overflow: hidden;
+
 }
 /*    animation  */
 .services:hover .serv {
